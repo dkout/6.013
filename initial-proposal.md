@@ -8,10 +8,14 @@
 - can we detect breathing? heartbeat?
 - can we control angle?
 
+Our group will use RADAR to measure the Doppler shift in a reflected RF signal. With the reflected RF signal we will use this information to characterize the speed and range of an object. In the experiment we will go one step further to see if we can detect breathing and heartbeat in a person.
+
 # metal detector / stud finder
 
 - what materials can we penetrate?
 - how small metal can we detect?
+
+aeua
 
 # transmit information
 
