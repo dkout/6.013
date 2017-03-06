@@ -4,9 +4,7 @@
 
 # Speed radar
 
-- can we control angle?
-
-Our group will use RADAR to measure the Doppler shift in a reflected RF signal. With the reflected RF signal we will use this information to characterize the speed and range of an object and it limitations. In the experiment we will also use the same method to detect breathing and heartbeat in a person.
+Our group will use RADAR to measure the Doppler shift in a reflected RF signal. With the reflected RF signal we will use this information to characterize the speed and range of an object and the limitations of the measurements we can obtain. In the experiment we will also use the same method to detect breathing and heartbeat in a person.
 
 # metal detector / stud finder
 
