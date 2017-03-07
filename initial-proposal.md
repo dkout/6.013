@@ -22,11 +22,6 @@ and the antenna. As a stretch goal, we would characterize the effect of
 alternative channel materials such as water (simulating a human), books, and
 whatever else might be between a RFID reader and a tag in real life.
 
-# metal detector / stud finder
-
-- what materials can we penetrate?
-- how small metal can we detect?
-
 # transmit information
 
 - can we measure the signal quality without VNA
