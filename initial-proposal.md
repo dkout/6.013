@@ -2,7 +2,8 @@
 % Andres Erbsen; Justin Graves; Dimitris Koutentakis
 % \today
 
-#Information transmission and material characterization
+#Information transmission over different channels
+
 For this project we aim to build a radar that sends information and characterizes a material in two main domains: One provide a scattering parameter matrix and two see how that affects bit error rate or information transmission through that medium. 
 
 The radar would have two configurations in order to produce those results. As seen in sketch (a) the first configuration would be the two antennas facing each other. In this configuration, we would put the material in between antenna and receiver in order to measure S¬11 and the BER. 
@@ -32,15 +33,6 @@ different (coil) antennas, transmit powers, and relative positionings of the tag
 and the antenna. As a stretch goal, we would characterize the effect of
 alternative channel materials such as water (simulating a human), books, and
 whatever else might be between a RFID reader and a tag in real life.
-
-# transmit information
-
-- can we measure the signal quality without VNA
-- how do obstacles affect signal quality?
-  -   complex S(\lambda) matrix
-  -   eye diagram
-  -   BER
-- how can we improve the signal using antenna design?
 
 # metal detector
 
