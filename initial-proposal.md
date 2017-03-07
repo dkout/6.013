@@ -1,6 +1,11 @@
-% 6.013 Initial Proposal
-% Andres Erbsen; Justin Graves; Dimitris Koutentakis
-% \today
+---
+title: 6.013 Initial Proposal
+author: Andres Erbsen; Justin Graves; Dimitris Koutentakis
+date: \today
+header-includes:
+	\usepackage{geometry}
+	\usepackage{graphicx}
+---
 
 #Information transmission over different channels
 
@@ -28,11 +33,14 @@ by the tag's coil and acts both as a power source and an antenna. The tag sends
 information back by modulating its resistance, which shows up as a voltage amplitude
 change on the reader's RLC circuit.
 
+\includegraphics[height=4cm]{rfid}
+
 We would use build a RFID reader and measure how its read range changes with
 different (coil) antennas, transmit powers, and relative positionings of the tag
 and the antenna. As a stretch goal, we would characterize the effect of
 alternative channel materials such as water (simulating a human), books, and
 whatever else might be between a RFID reader and a tag in real life.
+
 
 # metal detector
 
