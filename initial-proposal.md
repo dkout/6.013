@@ -18,6 +18,11 @@ For the measurement of $S_{11}$ and $S_{21}$ we would have to measure the power 
 In order to measure the Bit Error Rate, we will implement some sort of information transmission. We would start by modulating the information we want to send and then apply the same method on the received signal in order to demodulate the signal. By comparing the sent and the received signal we will then do a Bit Error Rate detection.
 This will allow us not only to characterize various materials, but also to see what types of materials are best for sending information at different frequencies. 
 
+\includegraphics[height=5cm]{data-a}
+\hfill
+\includegraphics[height=5cm]{data-b}
+\hfill
+\includegraphics[height=5cm]{along}
 
 #2. Inductive RFID Range Experiments
 
