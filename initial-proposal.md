@@ -7,6 +7,7 @@
 - how small speeds can we detect?
 - can we detect breathing? heartbeat?
 - can we control angle?
+- TOO BOORING
 
 # metal detector / stud finder
 
@@ -17,4 +18,7 @@
 
 - can we measure the signal quality without VNA
 - how do obstacles affect signal quality?
+  -   complex S(\lambda) matrix
+  -   eye diagram
+  -   BER
 - how can we improve the signal using antenna design?
