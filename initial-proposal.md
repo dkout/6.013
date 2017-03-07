@@ -7,7 +7,7 @@ header-includes:
 	\usepackage{graphicx}
 ---
 
-#Information transmission over different channels
+#1. Information Transmission Over Different Channels
 
 For this project we aim to build a radar that sends information and characterizes a material in two main domains: One provide a scattering parameter matrix and two see how that affects bit error rate or information transmission through that medium. 
 
@@ -19,7 +19,7 @@ In order to measure the Bit Error Rate, we will implement some sort of informati
 This will allow us not only to characterize various materials, but also to see what types of materials are best for sending information at different frequencies. 
 
 
-# Inductive RFID range experiments
+#2. Inductive RFID Range Experiments
 
 MIT has these "wonderful" RFID tags that we need to tap to enter campus spaces.
 Wouldn't it be cool if we could hang one off our backback, and get in the door
@@ -42,7 +42,7 @@ alternative channel materials such as water (simulating a human), books, and
 whatever else might be between a RFID reader and a tag in real life.
 
 
-# metal detector
+#3. Metal Detector
 
 Our group would use RADAR to analyze reflected power and transmitted
 power from various materials in an attempt to classify their intrinsic
