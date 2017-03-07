@@ -2,6 +2,17 @@
 % Andres Erbsen; Justin Graves; Dimitris Koutentakis
 % \today
 
+#Information transmission and material characterization
+For this project we aim to build a radar that sends information and characterizes a material in two main domains: One provide a scattering parameter matrix and two see how that affects bit error rate or information transmission through that medium. 
+
+The radar would have two configurations in order to produce those results. As seen in sketch (a) the first configuration would be the two antennas facing each other. In this configuration, we would put the material in between antenna and receiver in order to measure S¬11 and the BER. 
+
+The second configuration (sketch b) would have the antennas pointing the same way in order to measure S21. We can either use three separate antennas to conduct those experiments or allow degrees of freedom in order to be able to move the two antennas into whichever configuration we need. 
+For the measurement of S11 and S21 we would have to measure the power received in each of the configurations and then take the ratio to the power of the signal sent. In order for this to work properly, we will first have a “calibration mode” in order to account for the free space loss. 
+In order to measure the Bit Error Rate, we will implement some sort of information transmission. We would start by modulating the information we want to send and then apply the same method on the received signal in order to demodulate the signal. By comparing the sent and the received signal we will then do a Bit Error Rate detection.
+This will allow us not only to characterize various materials, but also to see what types of materials are best for sending information at different frequencies. 
+
+
 # Inductive RFID range experiments
 
 MIT has these "wonderful" RFID tags that we need to tap to enter campus spaces.
