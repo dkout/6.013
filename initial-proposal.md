@@ -2,19 +2,7 @@
 % Andres Erbsen, Justin Graves, Dimitris Koutentakis
 % \today
 
-# Speed radar
-
-Our group will use RADAR to measure the Doppler shift in a reflected RF signal. With the reflected RF signal we will use this information to characterize the speed and range of an object and the limitations of the measurements we can obtain. In the experiment we will also use the same method to detect breathing and heartbeat in a person.
-
-# metal detector / stud finder
-
-- what materials can we penetrate?
-- how small metal can we detect?
+# metal detector
 
 
-
-# transmit information
-
-- can we measure the signal quality without VNA
-- how do obstacles affect signal quality?
-- how can we improve the signal using antenna design?
+Our group will use RADAR to analyze reflected power and transmitted power from various metals in an attempt to classify their intrinsic properties such as permittivity and permeability. Once we quantify such metals we will use the data to sweep a room to find a particular metal we are interested in and define its distance. We will also characterize the penetration depth of each metal.
