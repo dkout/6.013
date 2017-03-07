@@ -1,6 +1,9 @@
 ---
 title: 6.013 Initial Proposal
-author: Andres Erbsen; Justin Graves; Dimitris Koutentakis
+author: 
+	- Andres Erbsen
+	- Justin Graves
+	- Dimitris Koutentakis
 date: \today
 header-includes:
 	\usepackage{geometry}
@@ -61,7 +64,7 @@ interested in and determine their size and distance.
 Ideally, we would use our model of material properties to
 automatically classify the signal as "metal" or "not metal", and have
 our radar announce it in real time. However, the primary goal of this
-project is to great the model, building the interactive functionality
+project is to create the model, building the interactive functionality
 might make for a nice demo but is probably less interesting.
 
 We expect to be able to reuse the radar equipment for the majority of
