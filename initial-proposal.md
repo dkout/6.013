@@ -35,3 +35,13 @@ whatever else might be between a RFID reader and a tag in real life.
   -   eye diagram
   -   BER
 - how can we improve the signal using antenna design?
+
+# metal detector
+
+Our group would use RADAR to analyze reflected power and transmitted
+power from various metals in an attempt to classify their intrinsic
+properties such as permittivity and permeability. Once we quantify
+such metals we will use the data to sweep a room to find a particular
+metal we are interested in and define its distance. We will also
+characterize the penetration depth of each metal.
+
