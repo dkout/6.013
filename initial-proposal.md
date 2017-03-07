@@ -39,6 +39,8 @@ information back by modulating its resistance, which shows up as a voltage ampli
 change on the reader's RLC circuit.
 
 \includegraphics[height=4cm]{rfid}
+\hfill
+\includegraphics[height=4cm]{metaldetect}
 
 We would use build a RFID reader and measure how its read range changes with
 different (coil) antennas, transmit powers, and relative positionings of the tag
