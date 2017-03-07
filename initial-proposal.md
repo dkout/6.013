@@ -34,9 +34,18 @@ whatever else might be between a RFID reader and a tag in real life.
 # metal detector
 
 Our group would use RADAR to analyze reflected power and transmitted
-power from various metals in an attempt to classify their intrinsic
-properties such as permittivity and permeability. Once we quantify
-such metals we will use the data to sweep a room to find a particular
-metal we are interested in and define its distance. We will also
-characterize the penetration depth of each metal.
+power from various materials in an attempt to classify their intrinsic
+properties such as permittivity and permeability. Once we have
+collected data for common materials, we will use the data to, for
+example, sweep the walls of a room to find a metal objects are
+interested in and determine their size and distance.
 
+Ideally, we would use our model of material properties to
+automatically classify the signal as "metal" or "not metal", and have
+our radar announce it in real time. However, the primary goal of this
+project is to great the model, building the interactive functionality
+might make for a nice demo but is probably less interesting.
+
+We expect to be able to reuse the radar equipment for the majority of
+this project, most of the work would be in characterization and
+classification of materials based on their properties.
