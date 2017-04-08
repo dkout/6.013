@@ -1,0 +1,6 @@
+https://web.eecs.umich.edu/~saraband/KSIEEE/HighQ.pdf "the subject of
+which is to introduce a new type of high- coiled slot-line resonator
+with comparison to the microstrip. On the other hand,
+conventional distributed element filters using coupled transmission-line
+resonators exhibit superior performance, but are frequently
+too large."
