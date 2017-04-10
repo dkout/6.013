@@ -1,6 +1,6 @@
 ---
 title: 6.013 Project Proposal\linebreak
-	Design and Characterization of Stripline Filters
+	Design and Characterization of Microstrip Filters
 author: 
 	- Andres Erbsen
 	- Justin Graves
@@ -37,3 +37,11 @@ Once we implement those changes, we should be on track to verify the performance
 
 
 # Application to WiFi Channel Detection
+
+The most variant of WiFi, 802.11g, operates (in the US) on 11 evenly-spaced
+frequencies from 2.412 to 2.462 GHz. Based on real-world experience, we estimate
+the noise level as -90dBm and a "good" signal as -50dBm for the purposes of this
+calculation. Thus, if we wanted to detect that channel 1 has no signal even if
+channel 11 is getting "full blast" from a nearby WiFi transceiver, our filter
+would need to have a selectivity of 40dB = 1000 for $\frac{\omega_{11}-\omega_{1}}
+{\omega} \approx \frac{50}{2500} = \frac{1}{50}$.
