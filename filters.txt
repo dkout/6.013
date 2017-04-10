@@ -4,3 +4,5 @@ with comparison to the microstrip. On the other hand,
 conventional distributed element filters using coupled transmission-line
 resonators exhibit superior performance, but are frequently
 too large."
+
+http://www.rfcafe.com/references/articles/Coupled_Microstrip_Filters_Improved_Characteristics.pdf
