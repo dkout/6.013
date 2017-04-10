@@ -10,3 +10,7 @@ http://www.rfcafe.com/references/articles/Coupled_Microstrip_Filters_Improved_Ch
 https://ir.nctu.edu.tw/bitstream/11536/27885/1/000182521500018.pdf
 
 http://www.umac.mo/rectors_office/docs/ruimartins_cv/publications/conferences/93.pdf
+
+http://bookzz.org/book/1166138/3c680f "Microstrip Filters for RF / Microwave Applications, 2nd Edition"
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5087843/pdf/pone.0164916.pdf
