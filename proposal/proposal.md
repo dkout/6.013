@@ -100,4 +100,4 @@ phone) is fine. For a demo, we might make different LEDs turn on on a receiver
 board when the same phone is using cellular data or WiFi.  Convieniently, the
 necessary RF components are already in our radar.
 
-\includegraphics[height=1.5in]{block-dia.png}
+\includegraphics[height=2in]{block-dia.png}
