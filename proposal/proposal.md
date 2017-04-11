@@ -28,7 +28,7 @@ high frequencies transmission line stubs can be left open or shorted to emulate
 discrete lumped elements: inductors and capacitors. We plan to simplify our
 design by keeping the length of our stubs to $\frac{\lambda}{8}$, then are stubs
 will have the absolute-value impedance equal to $Z_{0}$. We plan to vary $Z_0$
-by changing the width of the transmission line, allowing us to emulate lumped
+by changing the width-length ratio of the transmission line, allowing us to emulate lumped
 elements of various impedances. A non-tangible goal of this experiment is for us
 to gain a more practical, intuitive understanding of how much microstrip
 implementation constraints limit the design room for analog filters.
