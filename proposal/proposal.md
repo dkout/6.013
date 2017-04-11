@@ -35,17 +35,33 @@ implementation constraints limit the design room for analog filters.
 
 ## TEM Resonator
 
+We plan to design and build a bandpass filter based on the TEM resonator
+topology presented in the end of lecture 14 and in pset 7 problem 2.
 
+## Implementation Strategy and Risks
+
+Using $\epsilon=2.33$ substrate described in the lab handout, 2.4GHz waves would
+have wavelength $\frac{3 \cdot 10^{8}\text{m/s}}{\sqrt{2.33}\cdot 2.4GHz} = 8.2\text{cm}$ -- much more
+practical than the values found in the pset. We plan to use that (or similar)
+substrate by default, creating traces using copper tape.  However, it is not
+obvious that any particular filter design we choose will be implementable using
+the tolerances that we can manufacture by hand -- anything below 1mm will be a
+point to backtrack and investigate alternative parameter choices. If absolutely
+necessary, we can vary the choice of the substrate or operating frequency.
+Again, while the project is to build and quantify some filters, we are doing
+this to understand what \emph{can} be done, so a negative result is as
+informative as a success -- we will just have to make sure that we also get some
+of the latter.
 
 # Testing Filters Using Our "Radar"
 In order to test that our filters work correctly, as well as make as much use as possible out of the radar we have already built, we plan on using the radar as a basic Vector Network Analyzer.  This VNA will be very similar to what we already have, since we only plan on measuring the S{21} paramater of our filters. S{21} should be enough to tell us if the filters are working as expected. Thus we will not need to complicate further our radar build in order to measure the rest of the S-matrix parameters. 
 
 The main changes we plan to do in order to use the radar to quantify the performance of our filters are summarized below:
 
-Hardwear changes:
+Hardware changes:
 a) Remove the can-antennas and replace them with regular SMA cables that will be attached to our filters.
 
-Softwear changes:
+Software changes:
 a) Remove Doppler operation
 b) Edit radar operation so that it scans a range of frequencies and measures how the power at the input at each of the frequencies. The arduino code would then return those arrays that we can use in order to plot how S21 changes depending on the frequency.
 
