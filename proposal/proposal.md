@@ -16,7 +16,7 @@ header-includes:
 We want to learn to design, build and analyze microstrip filters. After all,
 what could be cooler than a useful circuit with no lumped components.
 Concretely, we plan to design and build two 2.4GHz band-pass filters using
-microstrips alone, and measure the two-port S-parameters of both of them. The
+microstrips alone, and measure the two-port S-parameters of both of them. Both
 designs will be optimized for first for build simplicity and secondarily for high $Q$.
 
 # Microstrip Filter Designs
