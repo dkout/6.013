@@ -72,33 +72,32 @@ Once we implement those changes, we should be on track to verify the performance
 
 # Application \& Demo
 
-#### WiFi Channel Detection?
-
 It would be really could if we could build a demo where different LED-s would
-turn on according to which WiFi channels are in use (using just filters and
-amplifiers, no active components). However, after detailed analysis, we believe
-that setting this as a goal would be overly ambitious.
-The most variant of WiFi, 802.11g, operates (in the US) on 11 evenly-spaced
-frequencies from 2.412 to 2.462 GHz. Based on real-world experience, we estimate
-the noise level as -90dBm and a "good" signal as -50dBm for the purposes of this
-calculation. Thus, if we wanted to detect that channel 1 has no signal even if
-channel 11 is getting "full blast" from a nearby WiFi transceiver, our filter
-would need to have an attenuation of 40dB only a fraction
-$\frac{\omega_{11}-\omega_{1}} {\omega} \approx \frac{50}{2500} = \frac{1}{50}$
-of the center frequency away from its passband. This seems difficult.
+turn on according to which radio frequencies are in use (using just filters and
+amplifiers, no active components). 
 
-#### WiFi vs GSM
+**WiFi Channel Detection?** The most variant of WiFi, 802.11g, operates (in the
+US) on 11 evenly-spaced frequencies from 2.412 to 2.462 GHz. Based on real-world
+experience, we estimate the noise level as -90dBm and a "good" signal as -50dBm
+for the purposes of this calculation. Thus, if we wanted to detect that channel
+1 has no signal even if channel 11 is getting "full blast" from a nearby WiFi
+transceiver, our filter would need to have an attenuation of 40dB only a
+fraction $\frac{\omega_{11}-\omega_{1}} {\omega} \approx \frac{50}{2500} =
+\frac{1}{50}$ of the center frequency away from its passband. Given the Q values
+seen in lecture and on the last pset, this seems very difficult to achieve.
 
-A much simpler version of the same task would be to differentiate GSM (around
-900MHz or 1800 MHz) from 2.4GHz WiFi, even though both signals are received on
-the same antenna.  However, since we have not learned about antennas yet, we
-don't know how to plan this one out. Of course, different phones and cell towers
-support different frequencies --  we would first use a software defined radio
-receiver to determine which frequency is used for cellular communication by our
-test phone, and then build a filter to detect that. Note that while intercepting
-GSM data is not necessarily legal, just detecting the presence of a signal (from
-our own phone) is fine. For a demo, we might make different LEDs turn on on a
-receiver board when the same phone is using cellular data or WiFi.
-Convieniently, the necessary RF components are already in our radar.
+**WiFi vs GSM** A much simpler version of the same task would be to
+differentiate GSM (around 900MHz or 1800 MHz) from 2.4GHz WiFi, even though both
+signals are received on the same antenna. Since the frequencies are far apart,
+limits on achievable Q should not be an issue (but secondary resonances could
+be). However, since we have not learned about antennas yet, we don't know how to
+plan this one out. Of course, different phones and cell towers support different
+frequencies --  we would first use a software defined radio receiver to
+determine which frequency is used for cellular communication by our test phone,
+and then build a filter to detect that. Note that while intercepting GSM data is
+not necessarily legal, just detecting the presence of a signal (from our own
+phone) is fine. For a demo, we might make different LEDs turn on on a receiver
+board when the same phone is using cellular data or WiFi.  Convieniently, the
+necessary RF components are already in our radar.
 
 \includegraphics[height=1.5in]{block-dia.png}
