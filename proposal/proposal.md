@@ -7,17 +7,14 @@ author:
 	- Dimitris Koutentakis
 date: \today
 header-includes:
-	\usepackage{geometry}
+	\usepackage[margin=1in]{geometry}
 	\usepackage{graphicx}
 ---
 
 # Overview
 
 We want to learn to design, build and analyze microstrip filters. After all,
-what could be cooler than a useful circuit with no lumped components. We hope
-that we will be able to build a system for detecting which WiFi channel (out of
-two) is in use with a single antenna, without any lumped-circuit filters or
-signal processing.
+what could be cooler than a useful circuit with no lumped components.
 
 # Filter Design Process
 
@@ -54,12 +51,32 @@ b) Edit radar operation so that it scans a range of frequencies and measures how
 Once we implement those changes, we should be on track to verify the performance of the filters.
 
 
-# Application to WiFi Channel Detection
+# Application Ideas
 
+#### WiFi Channel Detection?
+
+It would be really could if we could build a demo where different LED-s would
+turn on according to which WiFi channels are in use (using just filters and
+amplifiers, no active components). However, after detailed analysis, we believe
+that setting this as a goal would be overly ambitious.
 The most variant of WiFi, 802.11g, operates (in the US) on 11 evenly-spaced
 frequencies from 2.412 to 2.462 GHz. Based on real-world experience, we estimate
 the noise level as -90dBm and a "good" signal as -50dBm for the purposes of this
 calculation. Thus, if we wanted to detect that channel 1 has no signal even if
 channel 11 is getting "full blast" from a nearby WiFi transceiver, our filter
-would need to have a selectivity of 40dB = 1000 for $\frac{\omega_{11}-\omega_{1}}
-{\omega} \approx \frac{50}{2500} = \frac{1}{50}$.
+would need to have an attenuation of 40dB = 10000 only a fraction
+$\frac{\omega_{11}-\omega_{1}} {\omega} \approx \frac{50}{2500} = \frac{1}{50}$
+of the center frequency away from its passband. This seems difficult.
+
+#### WiFi vs GSM
+
+A much simpler version of the same task would be to differentiate GSM (around
+900MHz or 1800 MHz) from 2.4GHz WiFi, even though both signals are received on
+the same antenna.  However, since we have not learned about antennas yet, we
+don't know how to plan this one out. Of course, different phones and cell towers
+support different frequencies --  we would first use a software defined radio
+receiver to determine which frequency is used for cellular communication by our
+test phone, and then build a filter to detect that. Note that while intercepting
+GSM data is not necessarily legal, just detecting the presence of a signal (from
+our own phone) is fine. For a demo, we might make different LEDs turn on on a
+receiver board when the same phone is using cellular data or WiFi.
