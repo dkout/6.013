@@ -19,7 +19,25 @@ that we will be able to build a system for detecting which WiFi channel (out of
 two) is in use with a single antenna, without any lumped-circuit filters or
 signal processing.
 
-# Example Filter Design
+# Filter Design Process
+
+For our filter design we will use the concept that we learned in class that at 
+high frequencies transmission line stubs can be left open or shorted to deliver 
+compatible performance instead of discrete lumped elements. Namely that these stubs 
+imedances are purely reactive, either being capacitive or inductive.
+
+We will take this idea one step further to note that if we keep the length of our
+stubs to $\frac{\lambda}{8}$, then are stubs will have the reactance equal to $jZ_{0}$.
+Thus making our design easy to make a transformation for a filter with lumped elements
+to one with transmission stubs since the reactance will be determined only by the
+characteristic impendance of the transmission stub (commonly known as Richard's Transformations).
+
+We will focus on the passband filter and focus on cirucits that have large Q factors. Since
+often times discrete elements circuits will be limited to discrete values of inductance and
+capacitance that are available, with our stubs we will be able to obtain values that rely on the width, length,
+and dielectiric properties of the material we choose to implement the transmission stubs from.
+
+
 
 # Testing Filters Using Our "Radar"
 In order to test that our filters work correctly, as well as make as much use as possible out of the radar we have already built, we plan on using the radar as a basic Vector Network Analyzer.  This VNA will be very similar to what we already have, since we only plan on measuring the S{21} paramater of our filters. S{21} should be enough to tell us if the filters are working as expected. Thus we will not need to complicate further our radar build in order to measure the rest of the S-matrix parameters. 
