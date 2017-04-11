@@ -97,3 +97,5 @@ test phone, and then build a filter to detect that. Note that while intercepting
 GSM data is not necessarily legal, just detecting the presence of a signal (from
 our own phone) is fine. For a demo, we might make different LEDs turn on on a
 receiver board when the same phone is using cellular data or WiFi.
+
+\includegraphics[height=1.5in]{block-dia.png}
