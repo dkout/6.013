@@ -17,7 +17,7 @@ We want to learn to design, build and analyze microstrip filters. After all,
 what could be cooler than a useful circuit with no lumped components.
 Concretely, we plan to design and build two 2.4GHz band-pass filters using
 microstrips alone, and measure the two-port S-parameters of both of them. The
-designs will be optimized for a compromise of build simplicity and high $Q$.
+designs will be optimized for first for build simplicity and secondarily for high $Q$.
 
 # Microstrip Filter Designs
 
@@ -41,17 +41,19 @@ topology presented in the end of lecture 14 and in pset 7 problem 2.
 ## Implementation Strategy and Risks
 
 Using $\epsilon=2.33$ substrate described in the lab handout, 2.4GHz waves would
-have wavelength $\frac{3 \cdot 10^{8}\text{m/s}}{\sqrt{2.33}\cdot 2.4GHz} = 8.2\text{cm}$ -- much more
-practical than the values found in the pset. We plan to use that (or similar)
-substrate by default, creating traces using copper tape.  However, it is not
-obvious that any particular filter design we choose will be implementable using
-the tolerances that we can manufacture by hand -- anything below 1mm will be a
-point to backtrack and investigate alternative parameter choices. If absolutely
-necessary, we can vary the choice of the substrate or operating frequency.
-Again, while the project is to build and quantify some filters, we are doing
-this to understand what \emph{can} be done, so a negative result is as
-informative as a success -- we will just have to make sure that we also get some
-of the latter.
+have wavelength $\frac{3 \cdot 10^{8}\text{m/s}}{\sqrt{2.33}\cdot 2.4GHz} =
+8.2\text{cm}$ -- much more practical than the values found in the pset. We plan
+to use that (or similar) substrate by default, creating traces using copper
+tape.  On the other hand, the model does not capture effects due to the
+connections loading the resonator having finite width, so there may be
+surprises.  In either case, is not obvious that any particular filter design we
+choose will be implementable using the tolerances that we can manufacture by
+hand -- anything below 1mm will be a point to backtrack and investigate
+alternative parameter choices. If absolutely necessary, we can vary the choice
+of the substrate or operating frequency.  Again, while the project is to build
+and quantify some filters, we are doing this to understand what \emph{can} be
+done, so a negative result is as informative as a success -- we will just have
+to make sure that we also get some working filters as well.
 
 # Testing Filters Using Our "Radar"
 In order to test that our filters work correctly, as well as make as much use as possible out of the radar we have already built, we plan on using the radar as a basic Vector Network Analyzer.  This VNA will be very similar to what we already have, since we only plan on measuring the S{21} paramater of our filters. S{21} should be enough to tell us if the filters are working as expected. Thus we will not need to complicate further our radar build in order to measure the rest of the S-matrix parameters. 
@@ -68,7 +70,7 @@ b) Edit radar operation so that it scans a range of frequencies and measures how
 Once we implement those changes, we should be on track to verify the performance of the filters.
 
 
-# Application Ideas
+# Application \& Demo
 
 #### WiFi Channel Detection?
 
@@ -81,7 +83,7 @@ frequencies from 2.412 to 2.462 GHz. Based on real-world experience, we estimate
 the noise level as -90dBm and a "good" signal as -50dBm for the purposes of this
 calculation. Thus, if we wanted to detect that channel 1 has no signal even if
 channel 11 is getting "full blast" from a nearby WiFi transceiver, our filter
-would need to have an attenuation of 40dB = 10000 only a fraction
+would need to have an attenuation of 40dB only a fraction
 $\frac{\omega_{11}-\omega_{1}} {\omega} \approx \frac{50}{2500} = \frac{1}{50}$
 of the center frequency away from its passband. This seems difficult.
 
@@ -97,5 +99,6 @@ test phone, and then build a filter to detect that. Note that while intercepting
 GSM data is not necessarily legal, just detecting the presence of a signal (from
 our own phone) is fine. For a demo, we might make different LEDs turn on on a
 receiver board when the same phone is using cellular data or WiFi.
+Convieniently, the necessary RF components are already in our radar.
 
 \includegraphics[height=1.5in]{block-dia.png}
