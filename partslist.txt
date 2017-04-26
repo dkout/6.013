@@ -1,0 +1,7 @@
+pool of copper tape
+-Knife/scissors for cutting
+-3 PCBs at least 8 cm long
+-6 PCB mountable SMA connectors
+-Broad spectrum antenna (2.4 GHz and below)
+-Access to VNA
+-2 SMA cables
