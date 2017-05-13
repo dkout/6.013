@@ -1,4 +1,4 @@
-pool of copper tape
+-spool of copper tape
 -Knife/scissors for cutting
 -3 PCBs at least 8 cm long
 -6 PCB mountable SMA connectors
