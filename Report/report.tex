@@ -1,6 +1,8 @@
 \documentclass[letterpaper, 12pt]{article}
-
+\usepackage{graphicx}
 \usepackage{amsmath}
+
+\graphicspath{{./pics/}}
 \begin{document}
 \title{6.013 Final project Report}
 \author{Andres Erbsen, Justin Graves, Dimitris Koutentakis}
@@ -30,7 +32,7 @@ In order to build a filter aimed at our radar's working frequency, we had to des
 \begin{equation*}
 \left.
 \begin{aligned}
-    D&=\frac{n\cdot\lambda_m}{2} \\
+    D&=\frac{m\cdot\lambda_n}{2} \\
     \lambda_n&=\frac{\lambda_0}{n}\\
     m&=1 \\
     \epsilon_r&=2.33 \\
@@ -46,7 +48,21 @@ describe
 \subsection{multiple stub band-pass filter}
 describes
 \section{Measurements}
+
+\subsection{Short-short half wave resonator}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth, angle=270]{1stub}
+    \caption {single stub measurements}
+\end{figure}
+\subsection{Short-short 2.4 GHz resonator}
+
+
+\subsection{Single stub band-stop filter}
 describe
+\subsection{multiple stub band-pass filter}
+describes
+
 \section{Discussion}
 describe
 \end{document}
