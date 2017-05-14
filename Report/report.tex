@@ -1,6 +1,7 @@
 \documentclass[letterpaper, 12pt]{article}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{float}
 
 \graphicspath{{./pics/}}
 \begin{document}
@@ -11,22 +12,32 @@
 \vspace{5mm}
 \tableofcontents
 \clearpage
-\section{Introduction}
-\section{Filter Design}
+\section{Abstract}
+\section {Introduction}
+\section{Approach}
 In order to design our filters, we had to apply some of the basic knowledge we acquired in the lectures towards the end of the semester. More specifically, we had to apply knowledge regarding transmission line resonators as well as smith charts and stubs.
 \\
 By calculating the dimensions for our given substrate and target frequencies we were able to build the filters desired. The filters that we ended up building are:
 \begin{itemize}
-    \item A short-short half wave resonator for $\lambda=?$,
+    \item A short-short half wave resonator built with the dimensions of the original substrate board,
     \item A short-short half wave resonator for $f=2.4 GHz$,
     \item A single stub band-stop resonator, and
     \item A multiple stub band pass approximation filter
 \end{itemize}
 \subsection{Short-short half wave resonator}
-For the first short-short half-wave resonator, we used the dimensions of the original board given. More specifically, we used a length of $D=?$ and $\delta$ very small in order to maximize our $Q$. 
+For the first short-short half-wave resonator, we used the dimensions of the original board given. More specifically, we used the length of the board, $D=7.7cm$ and $\delta$ very small in order to maximize our $Q$. Given the substrate and the width of the board, we calculated that this filter would work optimally for a frequency of $f=1.28 GHz$
 \begin{align*}
-    D=
+    D=7.7cm &\Rightarrow \frac{\lambda_n}{2}=7.7cm \\
+    \lambda_0=7.7cm\cdot2\cdot\sqrt{2.33}&\Rightarrow \lambda_0=23.5cm \\
+    f=\frac{3\cdot10^{8}}{23.5\cdot10^{-2}} &\Rightarrow f=1.277 GHz
 \end{align*}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth, angle = 270]{filter1}
+    \caption{Original width half-wave resonator filter}
+\end{figure}
+% \clearpage
 \subsection{Short-short 2.4 GHz resonator}
 In order to build a filter aimed at our radar's working frequency, we had to design and build a filter that would work at around 2.4 GHz. The calculations we made can be seen below:
 \begin{equation*}
@@ -42,6 +53,13 @@ In order to build a filter aimed at our radar's working frequency, we had to des
 \Longrightarrow
 D=0.0409m
 \end{equation*}
+After cutting the substrate boards at the calculated dimensions, we had the following filter:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth, angle = 270]{filter2}
+    \caption{2.4GHz half-wave resonator filter}
+\end{figure}
 
 \subsection{Single stub band-stop filter}
 describe
