@@ -18,7 +18,12 @@
 % \tableofcontents
 % \clearpage
 \section{Abstract}
-From 6.013 we learned that transmission lines can resonate at certain frequencies and create standing waves due to the geometry and what happens at the boundaries of the lines. We also learned that as the boundary geometry changes the electromagnetic fields inside the boundaries also change. From this idea it is reasonable to come to the conclusion that you should be able to filter which electromagnetic waves can pass through the transmission by designing a specific geometry for the interested electromagnetic wave to pass through.
+From 6.013 we learned that transmission lines can resonate at certain
+frequencies and create standing waves based on the geometry and reflection
+coefficients at the boundaries of the lines. We used this concept to design,
+build, and characterize two band-pass filters (achieving 30dB stop-band
+attenuation) based on TEM resonators and two band-stop filters that produce a
+smith chart short at the stop frequency (achieving 45dB attenuation).
 
 \section {Introduction}
 Designing filters using discrete components has its limitations. Basic filters are built using discrete components such as capacitors and inductors in which their constitutive voltage-current laws are only time dependent. In 6.013, we learned that if the dimensions of your circuit are comparable to the wavelength of your of your signal, that phase changes in voltages and currents become significant. As frequency of a signal increases, the wavelength decreases and for anything in the radio frequency $f > 300 MHz$ our wavelength will be less than a meter. These introduced phase changes from having dimensions comparable to the wavelength, will produce maximas and minimas in voltages and currents along the path your signals travels. The model for discrete reactive components only depend on time but with the introduction of phase changes we now need reactive components that both depend on time and space, which are called distributed elements. It must also be said that with discrete reactive components, capacitors and inductors, the range of possible reactive values is limited but in not the case with distributed components. 
