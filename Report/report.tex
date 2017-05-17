@@ -10,7 +10,7 @@
 \graphicspath{{./pics/}}
 \begin{document}
 
-\title{\vspace{-15mm} 6.013 Final Project Report}
+\title{\vspace{-15mm} Microstrip Filter Design using Open Stubs}
 \author{Andres Erbsen, Justin Graves, Dimitris Koutentakis}
 \date{\today}
 \maketitle
@@ -118,6 +118,6 @@ resonant frequencies.
     \caption{Matlab plot of VNA-measured filter responses}
 \end{figure}
 \section{Conclusion}
-The overall behavior of the filters worked as desired. The band-stop filter was able to attenuate the target signal of 2.45 GHz by 36dB with little sacrifice leaving frequencies below 2GHz and above 3GHz with attenutaion less than 10dB. The designed band-pass filter operated at a bandwidth of 0.07 GHz and at a center frequency of 2.5 GHz. The multiple stub band-stop filter provided wider bandwidth in the passpand region allowing 2.4GHz to pass with nearly 0 dB attenutation. The main limitation with the microstrip design is the cutting of the width of each strip which would affect the characteristic impedance of the line. This factor would create mismatching with impedances with our stubs and main lines therefore causing unwanted reflections at their boundary. It can also be infered that our single stub band-stop filter has a high Voltage Standing Wave Ratio since it produced attenna like effects with being shielded. The proposed filters are all easily implemented without using discrete components and can be integrated into other RF devices and ciruits that target 2.4 GHz.
+The overall behavior of the filters worked as desired. The band-stop filter was able to attenuate the target signal of 2.45 GHz by 36dB with little sacrifice leaving frequencies below 2GHz and above 3GHz with attenutaion less than 10dB. The designed band-pass filter operated at a bandwidth of 0.07 GHz and at a center frequency of 2.5 GHz. The multiple stub band-stop filter provided wider bandwidth in the passpand region allowing 2.4GHz to pass with nearly 0 dB attenutation. The main limitation with the microstrip design is the cutting of the width of each strip which would affect the characteristic impedance of the line. This factor would create mismatching with impedances with our stubs and main lines therefore causing unwanted reflections at their boundary. It can also be infered that our single stub band-stop filter has a high Voltage Standing Wave Ratio since it produced attenna like effects without being shielded. The proposed filters are all easily implemented without using discrete components and can be integrated into other RF devices and ciruits that target 2.4 GHz.
 \end{document}
 
