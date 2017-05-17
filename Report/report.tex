@@ -26,7 +26,7 @@ attenuation) based on TEM resonators and two band-stop filters that produce a
 smith chart short at the stop frequency (achieving 45dB attenuation).
 
 \section {Introduction}
-Designing filters using discrete components has its limitations. Basic filters are built using discrete components such as capacitors and inductors in which their constitutive voltage-current laws are only time dependent. In 6.013, we learned that if the dimensions of your circuit are comparable to the wavelength of your of your signal, that phase changes in voltages and currents become significant. As frequency of a signal increases, the wavelength decreases and for anything in the radio frequency $f > 300 MHz$ our wavelength will be less than a meter. These introduced phase changes from having dimensions comparable to the wavelength, will produce maximas and minimas in voltages and currents along the path your signals travels. The model for discrete reactive components only depend on time but with the introduction of phase changes we now need reactive components that both depend on time and space, which are called distributed elements. It must also be said that with discrete reactive components, capacitors and inductors, the range of possible reactive values is limited but in not the case with distributed components. 
+Designing filters using discrete components has its limitations. Basic filters are built using discrete components such as capacitors and inductors in which their constitutive voltage-current laws are only time dependent. In 6.013, we learned that if the dimensions of your circuit are comparable to the wavelength of your of your signal, that phase changes in voltages and currents become significant. As frequency of a signal increases, the wavelength decreases and for anything in the radio frequency $f > 300 MHz$ our wavelength will be less than a meter. These introduced phase changes from having dimensions comparable to the wavelength, will produce maximas and minimas in voltages and currents along the path your signals travels. The model for discrete reactive components only depend on time but with the introduction of phase changes we now need reactive components that both depend on time and space, which are called distributed elements. It must also be said that with discrete reactive components, capacitors and inductors, the range of possible reactive values is limited but this is not the case with distributed components. 
 
 
 \section{Approach}
@@ -79,13 +79,13 @@ As seen in the yellow line, the short-short band pass filter described first abo
 % \subsection{Short-short 2.4 GHz resonator}
 
 \subsection{2.45 GHz half-wave band-pass filter}
-The 2.45 GHz worked out much better in the experiments we conducted because of the more careful dimensioning and manufacturing of the filter. As it can be seen in the figure attached, the red line representing this filter is attenuated only by 2.6 dB at 2.45 GHz, while the rest (with the exception of the second resonant frequency which is attenuated by 1.4 dB at 4.95 GHz), generally provides more than 30dB attenuation. This performance was exceptionally promising for the filter desing.  
+The 2.45 GHz worked out much better in the experiments we conducted because of the more careful dimensioning and manufacturing of the filter. As it can be seen in the figure attached, the red line representing this filter is attenuated only by 2.6 dB at 2.45 GHz, while the rest (with the exception of the second resonant frequency which is attenuated by 1.4 dB at 4.95 GHz), generally provides more than 30dB attenuation. This performance was exceptionally promising for the filter design.  
 
 
 \subsection{Single stub band-stop filter}
 The single-stub quarter wavelenth 2.4 GHz band-stop filter produced again a surprisingly good output. As demonstrated by the blue line on the plot, this filter returned a very sharp "dip" at 2.375 GHz, attenuating the signal by 36dB. The attenuation far from the cut-off frequency was virtually zero. The only problem we faced with this design is in trying to attenuate Wi-Fi signal, as the stub would act as an antenna since we could not properly shield it. This was partially solved by shielding it in aluminum foil (purple line). 
 
-\subsection{multiple stub band-pass filter}
+\subsection{Multiple stub band-pass filter}
 The multiple band-stop frequency quarter-wavelength stub filter is represented by the green line on the graph. This filter resulted in a wide enough band with very sharp edges and virtually zero attenuation at around 2.4-2.5 GHz which was the respone we were looking for. In addition to that, one can see low-attenuation peaks at frequencies not attenuated by the stubs or their resonant frequencies. 
 
 \begin{figure}[H]
@@ -94,6 +94,6 @@ The multiple band-stop frequency quarter-wavelength stub filter is represented b
     \caption{Matlab plot of VNA-measured filter responses}
 \end{figure}
 \section{Conclusion}
-describe
+The overall behavior of the filters worked as desired. The band-stop filter was able to attenuate the target signal of 2.45 GHz by 36dB with little sacrifice leaving frequencies below 2GHz and above 3GHz with attenutaion less than 10dB. The designed band-pass filter operated at a bandwidth of 0.07 GHz and at a center frequency of 2.5 GHz. The multiple stub band-stop filter provided wider bandwidth in the passpand region allowing 2.4GHz to pass with nearly 0 dB attenutation. The main limitation with the microstrip design is the cutting of the width of each strip which would affect the characteristic impedance of the line. This factor would create mismatching with impedances with our stubs and main lines therefore causing unwanted reflections at their boundary. It can also be infered that our single stub band-stop filter has a high Voltage Standing Wave Ratio since it produced attenna like effects with being shielded. The proposed filters are all easily implemented without using discrete components and can be integrated into other RF devices and ciruits that target 2.4 GHz.
 \end{document}
 
