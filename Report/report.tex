@@ -21,13 +21,29 @@
 From 6.013 we learned that transmission lines can resonate at certain
 frequencies and create standing waves based on the geometry and reflection
 coefficients at the boundaries of the lines. We used this concept to design,
-build, and characterize two band-pass filters (achieving 30dB stop-band
+build, and characterize two band-pass filters (achieving 20dB stop-band
 attenuation) based on TEM resonators and two band-stop filters that produce a
-smith chart short at the stop frequency (achieving 45dB attenuation).
+smith chart short at the stop frequency (achieving 35dB attenuation).
 
 \section {Introduction}
-Designing filters using discrete components has its limitations. Basic filters are built using discrete components such as capacitors and inductors in which their constitutive voltage-current laws are only time dependent. In 6.013, we learned that if the dimensions of your circuit are comparable to the wavelength of your of your signal, that phase changes in voltages and currents become significant. As frequency of a signal increases, the wavelength decreases and for anything in the radio frequency $f > 300 MHz$ our wavelength will be less than a meter. These introduced phase changes from having dimensions comparable to the wavelength, will produce maximas and minimas in voltages and currents along the path your signals travels. The model for discrete reactive components only depend on time but with the introduction of phase changes we now need reactive components that both depend on time and space, which are called distributed elements. It must also be said that with discrete reactive components, capacitors and inductors, the range of possible reactive values is limited but this is not the case with distributed components. 
+Filters are very important components in a multitude of applications that are
+essential to our day-to-day lives. They are vital in communication receivers and
+transmitters in order select channel reception, block interference from various
+sources as well as avoid transmission in unwanted frequencies that can have
+technical as well as legal implications.  There is a variety of ways to build
+electronic filters, the most simple of which are lumped component RLC 
+circuits. However, the above-mentioned often use frequencies in multiple MHz and
+GHz, and building lumped-element filters is increasingly difficult at higher
+frequencies.  If we wanted to build lumped
+element circuit filters for our 2.4 GHz radar
+frequency, we would need an LC product of $10^{-10}\text{s}^2$. Given an
+inter-trace capacitance of 1pF, we would need inductors as small as 10nH.
+A simple wire (or PCB trace) would have inductance higher than that.
 
+In order to solve this problem we designed, developed and debugged a series of
+band stop and band pass filters made by microstrips. Microstrips allow us to
+design and build some highly accurate filters with straightforward tools and
+manufacturing processes.
 
 \section{Approach}
 In order to design our filters, we had to apply some of the basic knowledge we acquired in the lectures towards the end of the semester. More specifically, we had to apply knowledge regarding transmission line resonators as well as smith charts and stubs.
@@ -37,7 +53,7 @@ By calculating the dimensions for our given substrate and target frequencies we 
     \item A short-short half wave resonator built with the dimensions of the original substrate board,
     \item A short-short half wave resonator for $f=2.4 GHz$,
     \item A single stub band-stop resonator, and
-    \item A multiple stub band pass approximation filter
+    \item A multi-band-stop filter with sharp passband edges
 \end{itemize}
 \subsection{Half wave resonator band-pass filter}
 For the first short-short half-wave resonator, we used the dimensions of the original board given. More specifically, we used the width of the board, $D=7.7cm$ and $\delta$ very small (\(\delta<0.8cm\) in order to maximize our $Q$. Given the width of our board and the material with $\epsilon_r=2.33$, we calculated a wavelength of \(\lambda_0=2\cdot D \cdot\sqrt(\epsilon_r)=23.5cm\), corresponding to a resonant frequency of $f=\frac{c}{\lambda_0}=1.277GHz$.
@@ -78,15 +94,23 @@ As seen in the yellow line, the short-short band pass filter described first abo
 % \end{figure}
 % \subsection{Short-short 2.4 GHz resonator}
 
-\subsection{2.45 GHz half-wave band-pass filter}
-The 2.45 GHz worked out much better in the experiments we conducted because of the more careful dimensioning and manufacturing of the filter. As it can be seen in the figure attached, the red line representing this filter is attenuated only by 2.6 dB at 2.45 GHz, while the rest (with the exception of the second resonant frequency which is attenuated by 1.4 dB at 4.95 GHz), generally provides more than 30dB attenuation. This performance was exceptionally promising for the filter design.  
-
+\subsection{2.45 GHz half-wave band-pass filter} The 2.45 GHz worked out much
+better in the experiments we conducted because of the more careful dimensioning
+and manufacturing of the filter. As it can be seen in the figure attached, the
+red line representing this filter is attenuated only by 2.6 dB at 2.45 GHz,
+while the frequencies immediately outside 2.25-2.75 GHz have more than 20dB
+attenuation. This performance was unexpectedly promising for the filter design.  
 
 \subsection{Single stub band-stop filter}
 The single-stub quarter wavelenth 2.4 GHz band-stop filter produced again a surprisingly good output. As demonstrated by the blue line on the plot, this filter returned a very sharp "dip" at 2.375 GHz, attenuating the signal by 36dB. The attenuation far from the cut-off frequency was virtually zero. The only problem we faced with this design is in trying to attenuate Wi-Fi signal, as the stub would act as an antenna since we could not properly shield it. This was partially solved by shielding it in aluminum foil (purple line). 
 
-\subsection{Multiple stub band-pass filter}
-The multiple band-stop frequency quarter-wavelength stub filter is represented by the green line on the graph. This filter resulted in a wide enough band with very sharp edges and virtually zero attenuation at around 2.4-2.5 GHz which was the respone we were looking for. In addition to that, one can see low-attenuation peaks at frequencies not attenuated by the stubs or their resonant frequencies. 
+\subsection{Multiple-stub filter}
+The multiple band-stop frequency quarter-wavelength stub filter is represented
+by the green line on the graph. This filter resulted in a wide passband with
+very sharp edges and virtually zero attenuation at around 2.4-2.5 GHz, which was
+the respone we were looking for. In addition to that, one can see
+low-attenuation peaks at frequencies not attenuated by the stubs or their
+resonant frequencies. 
 
 \begin{figure}[H]
     \centering
